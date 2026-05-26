@@ -18,7 +18,7 @@ class DISTANCE
 		}
 		DISTANCE calc(DISTANCE c1,DISTANCE c2)
 		{
-			COMP c;
+			DISTANCE c;
 			c.in=c1.in+c2.in;
 			c.ft=c1.ft+c2.ft+c.in/12;
             c.in=c.in/12;	
