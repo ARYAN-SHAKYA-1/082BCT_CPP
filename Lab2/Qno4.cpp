@@ -10,11 +10,30 @@ class information{
     {
         cin>>name >> address;
     }
-    void  swapdata(information i1,information i2)
+    void  swapdata(information &i1,information &i2)
     {
         information temp;
+        temp=i1;
+        i1=i2;
+        i2=temp;
+
+    }
+    void display()
+    {
+        cout<<"name:"<<name<<" address:"<<address<<endl;
     }
 };
 int main(){
+    information i1,i2;
+    i1.input();
+    i2.input();
+    cout<<"before swap "<<endl;
+    i1.display();
+    i2.display();
+    i1.swapdata(i1,i2);
+    cout<<"after swap"<<endl;
+    i1.display();
+    i2.display();
+    return 0;
 
 }
