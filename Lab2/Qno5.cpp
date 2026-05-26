@@ -6,9 +6,26 @@ using namespace std;
 
 class Shapes
 {
-    int length, radius;
+    int height, radius,;
     public:
-    void input(){
-        cin>>length>>radius;
+    void input()
+    {
+        cin>>height>>radius;
+    }
+    float TSA()
+    {
+        return ( 2*3.14*radius*(radius+height));
+    }
+    float CSA()
+    {
+        return(2*3.14*radius*height);
     }
 };
+
+int main()
+{
+    Shapes s1;
+    s1.input();
+    cout<<"Tsa = "<<s1.TSA()<<" Csa = "<<s1.CSA();
+    return 0;
+}
