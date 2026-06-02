@@ -1,0 +1,9 @@
+1.wap to create a constant object and consant member function. create a function name set data
+to initile the data member of constant object
+
+2.wap to allocate a menmory dynamlically to an array 
+
+
+3. create a class name employee withdata member name and salary.
+dymanlically allocate memory for object create two function input 
+and dispay to take input and disply the details of employee
