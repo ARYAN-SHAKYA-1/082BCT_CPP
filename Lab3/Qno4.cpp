@@ -2,7 +2,7 @@
 
 /* 
     for pre increment
-    returnType operator(keyword) operatorSymbol() 
+    returnType operator(keyword) operatorSymbol(argument) 
     {
     //body;
     }
