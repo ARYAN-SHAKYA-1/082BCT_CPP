@@ -14,7 +14,7 @@ class Time{
         a=x;
     }
     void setData() const{
-        scanf("%d",a);
+        cin>>a;
     }
 };
 int main(){

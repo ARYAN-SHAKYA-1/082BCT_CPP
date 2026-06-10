@@ -1,5 +1,5 @@
 //unary operator overloading;
-//pre increment
+//post decrement
 
 /* 
     for pre increment
@@ -22,8 +22,8 @@ class test{
     void display(){
         cout<<"the value of x is"<<x<<endl;
     }
-    int operator ++(){
-        x = x+2;
+    int operator --(int){
+        x = x-2;
     }
 };
 
@@ -31,7 +31,7 @@ int main()
 {
     test t;
     t.input();
-    ++t;
+    t--;
     t.display();
     return 0;
 }
