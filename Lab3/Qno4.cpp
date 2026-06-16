@@ -1,29 +1,37 @@
+//unary operator overloading;
+//pre increment
+
+/* 
+    for pre increment
+    returnType operator(keyword) operatorSymbol(argument) 
+    {
+    //body;
+    }
+    for post increment
+    returnType 
+*/
 #include<iostream>
 using namespace std;
 
-class test
-{
-    int a;
+class test{
+    int x;
     public:
-        void input()
-        {
-            cout<<"enter value";
-            cin>>a;
-        }
-        void operator ++(int)
-        {
-            a=a+5;//plus 5 huncha.
-        }
-        void dispay()
-        {
-            cout<<"the value of a:"<<a;
-        }
+    void input(){
+        cin>>x;
+    }
+    void display(){
+        cout<<"the value of x is"<<x<<endl;
+    }
+    int operator ++(){
+        x = x+2;
+    }
 };
 
 int main()
 {
     test t;
     t.input();
-    t++;
-    t.dispay();
+    ++t;
+    t.display();
+    return 0;
 }
