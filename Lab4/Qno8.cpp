@@ -1,3 +1,8 @@
+
+/*
+Qno8
+Create a class Time with data member hr, in , sec . overload the relational operator (>=) to comare two time object
+ */
 #include<iostream>
 using namespace std;
 class TIME
@@ -11,14 +16,19 @@ class TIME
     }
     bool operator >=(TIME t)
     {
-        if(hr>t.hr)
-        return true;
-        else if(hr==t.hr && min>t.min)
-        return true;
-        else if(hr==t.hr && min==t.min && sec>=t.sec)
-        return true;
-        else
-        return false;
+        // if(hr>t.hr)
+        // return true;
+        // else if(hr==t.hr && min>t.min)
+        // return true;
+        // else if(hr==t.hr && min==t.min && sec>=t.sec)
+        // return true;
+        // else
+        // return false;
+        TIME temp1,temp2;
+        temp1.sec =sec+min*60+hr*3600;
+        temp2.sec =t.sec+t.min*60+t.hr*3600;
+        return (temp1.sec >= temp2.sec);
+
     }
 };
 int main()
