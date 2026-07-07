@@ -50,11 +50,9 @@ class C : public A ,public B
 };
 int main()
 {
-    A a1;
-    B b1;
-    a1.input();
-    b1.input();
     C c1;
+    c1.A::input();
+    c1.B::input();
     c1.sum();
     c1.output();
     return 0;
