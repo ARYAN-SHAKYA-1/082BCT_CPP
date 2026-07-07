@@ -1,3 +1,8 @@
+/*
+Qno 6
+wap to overload the binary + operator using non member function
+
+*/
 #include<iostream>
 using namespace std;
 class add

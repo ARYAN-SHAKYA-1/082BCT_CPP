@@ -1,3 +1,8 @@
+/*
+Qno7
+wap to create a class matrix , overload the binary - operator using non member function 
+to add two martix objects
+*/
 #include<iostream>
 using namespace std;
 class Matrix

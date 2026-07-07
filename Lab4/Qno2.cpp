@@ -20,10 +20,10 @@ public:
         ft=f;
         in=i;
     }
-    Distance operator*(Distance t){
+    Distance operator+(Distance t){
         Distance temp;
-        temp.in=in-t.in;
-        temp.ft=ft-t.ft +temp.in/12;
+        temp.in=in+t.in;
+        temp.ft=ft+t.ft +temp.in/12;
         temp.in%=12;
         return temp;
     }
@@ -33,6 +33,6 @@ public:
 };
 int main(){
     Distance d1(2, 5), d2(1, 3), d3;
-    d3=d1*d2;
+    d3=d1+d2;
     d3.display();
 }
