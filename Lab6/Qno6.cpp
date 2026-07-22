@@ -19,10 +19,7 @@ class B
             cout<<"this is output of B"<<endl;
         }
 };
-class C : public A ,public B 
-{
-    
-};
+class C : public A ,public B {};
 int main()
 {
     C c1;

@@ -19,7 +19,7 @@ class animal{
 class cow: public animal{
     public:
     void giveMilk(){
-        cout<<"98%' pure milk";
+        cout<<"98% pure milk";
     }
 };
 int main(){

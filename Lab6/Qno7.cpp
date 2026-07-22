@@ -10,12 +10,8 @@ class A
     public:
         void input()
         {
-            cout<<"Enter a number";
-            cin>>a;
-        }
-        void output()
-        {
-            cout<<"this is output of A"<<endl;
+     cout<<"Enter a number";
+     cin>>a;
         }
 };
 class B 
@@ -25,28 +21,23 @@ class B
     public:
         void input()
         {
-            cout<<"Enter a number";
-            cin>>a;
-        }
-        void output()
-        {
-            cout<<"this is output of B"<<endl;
+     cout<<"Enter a number";
+     cin>>a;
         }
 };
 class C : public A ,public B 
 {
     int y;
     public:
-            void sum()
-            {
-                y=0;
-                y=A::a+B::a;
-            }
-            void output()
-            {
-                cout<<"the sum is :"<<y<<endl;
-            }
-    
+     void sum()
+     {
+         y=0;
+         y=A::a+B::a;
+     }
+     void output()
+     {
+         cout<<"the sum is :"<<y<<endl;
+     }
 };
 int main()
 {
