@@ -13,6 +13,9 @@ class A
      cout<<"Enter a number";
      cin>>a;
         }
+        A(){
+            cout <<"A";
+        }
 };
 class B 
 {
@@ -24,8 +27,11 @@ class B
      cout<<"Enter a number";
      cin>>a;
         }
+        B(){
+            cout <<"B";
+        }
 };
-class C : public A ,public B 
+class C : public B ,public A 
 {
     int y;
     public:
@@ -38,6 +44,9 @@ class C : public A ,public B
      {
          cout<<"the sum is :"<<y<<endl;
      }
+     C(){
+            cout <<"c";
+        }
 };
 int main()
 {
