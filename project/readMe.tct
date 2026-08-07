@@ -1,4 +1,9 @@
 Idea
 make a college management system that has seperate file for staffs and students.
 there is seperate file for teaching staff and non teaching  staffs.
-the project will include a filteration system for teachers on basis of subject.
+the project will include a filteration system for: teachers on basis of subjects, teacher id , for students based on student id / roll no, program, for non teaching staff on basis of id, and role.
+
+********************this program will purely terminal operated.********************
+
+
+this program will use the concept of inhertance(any type mostly multiple), file handeling.
