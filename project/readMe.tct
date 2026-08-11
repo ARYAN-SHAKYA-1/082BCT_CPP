@@ -7,3 +7,16 @@ the project will include a filteration system for: teachers on basis of subjects
 
 
 this program will use the concept of inhertance(any type mostly multiple), file handeling.
+
+
+
+
+
+
+to do list
+1. make file handeling files to deal with stuednts teaching  and non teaching staff
+2. make a filteratino system that filter teacher based on subjects
+3. make a filteration system that filters stuedn based on their program , 
+4. search systen that find teachers  based on name.
+5. search system that find student based on their roll no.
+6. search system that find non teaching staff based on their role.
