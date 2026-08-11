@@ -7,20 +7,24 @@ class Staff:public Person{
     int noOfLeaves;
     bool isTeacher;
     public:
-
+    //default construcots
     Staff(){
         noOfLeaves =0;
     }
 
+    //setters
     void setTeacher(bool value){
         isTeacher=value;
     }
-    bool getTeacher(){
-        return isTeacher;
-    }
+   
     void setSalary(float value){
         salary= value;
     }
+     bool getTeacher(){
+        return isTeacher;
+    }
+
+    //Getters
     float getSalary(){
         return (salary);
     }

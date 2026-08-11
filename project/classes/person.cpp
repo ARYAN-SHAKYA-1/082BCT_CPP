@@ -6,6 +6,8 @@ class Person{
     string name, address;
     int age,id;
  public:
+
+ //Setters
  void setName(const string& value){
     name=value;
  }
@@ -20,6 +22,8 @@ class Person{
     id=value;
  }
 
+
+ //Getters
  string getName(){
     return(name);
  }
