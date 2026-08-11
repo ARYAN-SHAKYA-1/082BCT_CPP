@@ -1,0 +1,4 @@
+1	6	aryan	19	9812345678	kathmandu	BCT	1e+06
+1	5	arjan	19	9812345679	Kathmandu	BCT	1e+06
+1	7	panta	18	2222222222	lalitpur	BCT	2e+09
+1	1	1	1	1	1	1	1
