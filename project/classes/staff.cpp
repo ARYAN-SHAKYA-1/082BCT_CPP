@@ -5,23 +5,22 @@ class Staff:public Person{
     protected:
     float salary;
     int noOfLeaves;
-    bool isTeacher;
     public:
+
+    //pure virtual funtion
+    virtual void takeLeave()=0;
     //default construcots
     Staff(){
         noOfLeaves =0;
     }
 
     //setters
-    void setTeacher(bool value){
-        isTeacher=value;
-    }
-   
+    
     void setSalary(float value){
         salary= value;
     }
-     bool getTeacher(){
-        return isTeacher;
+    void setLeaves(int value){
+        noOfLeaves=value;
     }
 
     //Getters
@@ -32,15 +31,7 @@ class Staff:public Person{
     int getNoOfLeaves(){
         return (noOfLeaves);
     }
-    void takeLeave(){
-        noOfLeaves++;
-        if(isTeacher){
-            salary-=(0.5*salary);
-        }
-        else{
-            salary-=(0.2*salary);
-        }
-    }
+    
 };
 
 class Teacher:public Staff{
@@ -73,36 +64,48 @@ class Teacher:public Staff{
         return(tid);
     }
 
+    //leave funtion
+    void takeLeave(){
+        noOfLeaves++;
+        salary-=(0.5*salary);
+    }
+
 };
 
 class NonTeachingStaff:public Staff{
 
     protected:
-    string subject;
-    int experience ,tid;
+    string role;
+    int experience ,staffId;
     public:
 
     //setters
     void setSubject( const string& value){
-        subject= value;
+        role= value;
     }
   
     void setExp(int value){
         experience = value;
     }
-    void setTid(int value){
-        tid = value;
+    void setStaffId(int value){
+        staffId = value;
     }
     //Getters
 
     string getSubject(){
-        return (subject);
+        return (role);
     }
     int getExp(){
         return (experience); 
     }
-    int getTid(){
-        return(tid);
+    int getStaffId(){
+        return(staffId);
+    }
+
+    //leave funtion
+    void takeLeave(){
+        noOfLeaves++;
+        salary-=(0.2*salary);
     }
 
 };

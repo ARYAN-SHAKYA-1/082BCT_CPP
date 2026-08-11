@@ -1,0 +1,1 @@
+1	ram	20	98000000	lalitpur	Security	5	200000	0

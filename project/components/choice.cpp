@@ -10,17 +10,24 @@ void mainChoice()
    case 0:
     system("clear");
     cout<<"Thank you for using this program "<<endl;
+    cin.ignore();
+    cin.ignore();
+    system("clear");
+    exit(0);
     break;
    case 1:
     input();
     break;
-   case 3:
+   case 2:
     output();
     break;
 
    
    default:
-    cout<<"Please re enter the choice";
+    cout<<"invalid option. press any ky eto continue";
+    cin.ignore();
+    cin.ignore();
+    mainChoice();
     break;
    }
 }

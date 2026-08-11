@@ -1,6 +1,6 @@
 #include "./person.cpp"
 
-class Student{
+class Student: public Person{
     protected:
      int rollNo, sid;
      float fees;

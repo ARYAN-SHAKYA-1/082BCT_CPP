@@ -9,6 +9,8 @@ void mainChoice();
 int indexUi();
 int inputUi();
 int staffInputUi();
+int outputUi();
+int staffOutputUi();
 
 //filehandelling
 //input.cpp

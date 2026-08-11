@@ -1,4 +1,7 @@
 //person class the base class. 
+#ifndef PERSON_CPP
+#define PERSON_CPP
+
 #include "../include.cpp"
 class Person{
  protected:
@@ -40,3 +43,4 @@ class Person{
  }
 
 };
+#endif

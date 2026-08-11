@@ -3,11 +3,11 @@
 #include"../header.h"
 //linking other filsse.
 // #include "../classes/student.cpp"
-#include "../classes/teacher.cpp"
+#include "../classes/staff.cpp"
 
 
 using namespace std;
-
+void studentInput();
 void input(){
     int choice=inputUi();
     switch (choice){
@@ -21,15 +21,16 @@ void input(){
         {   
         char stop;
         do{
-        teacherInput();
-        cout<<"Enter 'N' to stop";
+        studentInput();
+        cout<<"Enter 'N' to stop:";
         cin.ignore();
         cin.get(stop);
-    }
-    while(stop !='N');
-    input();
-        
-    }
+        }
+        while(stop !='N');
+        input();
+        }
+        break;
+
         default:
         cout<<"invalid input. press any key to continue..."<<endl;
         cin.ignore();
@@ -40,6 +41,7 @@ void input(){
 }
 
 void teacherInput();
+void nonTeacherStaffInput();
 
 void staffInput(){
     int choice = staffInputUi();
@@ -53,7 +55,7 @@ void staffInput(){
         char stop;
         do{
         teacherInput();
-        cout<<"Enter 'N' to stop";
+        cout<<"Enter 'N' to stop:";
         cin.ignore();
         cin.get(stop);
     }
@@ -62,12 +64,27 @@ void staffInput(){
         
     }
         break;
-    
+    case 2:
+    {
+        char stop;
+        do{
+         nonTeacherStaffInput();
+         cout<<"Enter 'N' to stop:";
+         cin.ignore();
+         cin.get(stop);
+          }while(stop !='N');
+          input();
+    }
+    break;
     default:
+        cout<<"invalid opetion . press any key to continue";
+        cin.ignore();
+        staffInput();
         break;
     }
 
 }
+//input for teacher staff
 
 int getNextId(){
     ifstream in("./text/teacher.txt");
@@ -83,12 +100,11 @@ int getNextId(){
     }
 
     in.close();
-    return maxId + 1;
+    return (maxId + 1);
 }
 
 
 void teacherInput(){
-    Teacher t1;
     string name, address,subject;
     float salary;
     int  age, exp,tid,leaves;
@@ -123,6 +139,78 @@ void teacherInput(){
     out<<tid<< "\t"<<name<< "\t"<<age<< "\t"<<phone<< "\t"<<address<< "\t"<<exp<< "\t"<<subject<< "\t"<<salary<<"\t"<<leaves<<endl;
 }
 
+//input for non teacher staff
+int getNextStaffId(){
+    ifstream in("./text/staff.txt");
+    int maxId = 0;
+    int currentId;
+    string rest;
+
+    while(in >> currentId){
+        getline(in, rest);
+        if(currentId > maxId){
+            maxId = currentId;
+        }
+    }
+
+    in.close();
+    return maxId + 1;
+}
+
+void nonTeacherStaffInput(){
+    string name, address, role;
+    int age, experience, staffId, noOfLeaves;
+    long phoneNumber;
+    float salary;
+    ofstream out;
+
+    out.open("./text/staff.txt", ios::app);
+
+    if(!out.is_open()){
+        exit(1);
+    }
+
+    staffId = getNextStaffId();
+    cout<<"Staff ID number: "<<staffId<<endl;
+
+    cout<<"Enter Name"<<endl;
+    cin>>name;
+    cout<<"Enter Age"<<endl;
+    cin>> age;
+    cout<<"Enter phone number "<<endl;
+    cin>> phoneNumber;
+    cout<<"Enter addrerss"<<endl;
+    cin>> address;
+    cout<<"Enter role"<<endl;
+    cin>> role;
+    cout<<"Enter experience"<<endl;
+    cin>> experience;
+    cout<<"Enter salary"<<endl;
+    cin>>salary;
+    cout<<"Enter leaves"<<endl;
+    cin>>noOfLeaves;
+
+    out<<staffId<< "\t"<<name<< "\t"<<age<< "\t"<<phoneNumber<< "\t"<<address<< "\t"<<role<< "\t"<<experience<< "\t"<<salary<<"\t"<<noOfLeaves<<endl;
+}
+
+//input for student
+
+int getNextStudentId(){
+    ifstream in;
+    in.open("../text/student.tct",ios::in);
+    int maxId=0;
+    int currentId;
+    string rest;
+    while(in>>currentId){
+        getline(in,rest);
+        if(currentId>maxId)
+        {
+            maxId= currentId;
+        }
+    }
+    in.close();
+    return (maxId+1);
+}
 
 void studentInput(){
     int rollNo, age,sid;
@@ -137,7 +225,7 @@ void studentInput(){
         exit(1);
     }
 
-    sid = getNextId();
+    sid = getNextStudentId();
     cout<<"Enter student id number"<<sid<<endl;
     cout<<"Enter student roll number"<<endl;
     cin>> rollNo;
@@ -156,3 +244,4 @@ void studentInput(){
 
     out<<sid<< "\t"<<rollNo<< "\t"<<name<< "\t"<<age<< "\t"<<phoneNumber<< "\t"<<address<< "\t"<<program<< "\t"<<fees<<endl;
 }
+
