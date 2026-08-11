@@ -42,3 +42,67 @@ class Staff:public Person{
         }
     }
 };
+
+class Teacher:public Staff{
+
+    protected:
+    string subject;
+    int experience ,tid;
+    public:
+
+    //setters
+    void setSubject( const string& value){
+        subject= value;
+    }
+  
+    void setExp(int value){
+        experience = value;
+    }
+    void setTid(int value){
+        tid = value;
+    }
+    //Getters
+
+    string getSubject(){
+        return (subject);
+    }
+    int getExp(){
+        return (experience); 
+    }
+    int getTid(){
+        return(tid);
+    }
+
+};
+
+class NonTeachingStaff:public Staff{
+
+    protected:
+    string subject;
+    int experience ,tid;
+    public:
+
+    //setters
+    void setSubject( const string& value){
+        subject= value;
+    }
+  
+    void setExp(int value){
+        experience = value;
+    }
+    void setTid(int value){
+        tid = value;
+    }
+    //Getters
+
+    string getSubject(){
+        return (subject);
+    }
+    int getExp(){
+        return (experience); 
+    }
+    int getTid(){
+        return(tid);
+    }
+
+};

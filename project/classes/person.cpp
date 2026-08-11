@@ -1,10 +1,10 @@
 //person class the base class. 
-#include<iostream>
-using namespace std;
+#include "../include.cpp"
 class Person{
  protected:
     string name, address;
-    int age,id;
+    int age;
+    long phoneNumber;
  public:
 
  //Setters
@@ -18,8 +18,9 @@ class Person{
    address=value;
 
  }
- void setId(int value){
-    id=value;
+
+ void setPhone(long value){
+    phoneNumber=value;
  }
 
 
@@ -33,8 +34,9 @@ class Person{
  string  getAddress(){
     return(address);
  }
- int getId(){
-    return(id);
+
+ long getPhone(){
+   return(phoneNumber);
  }
 
 };

@@ -2,7 +2,7 @@
 
 class Student{
     protected:
-     int rollNo;
+     int rollNo, sid;
      float fees;
      string program;
     public:
@@ -17,6 +17,9 @@ class Student{
      void setFees(float value){
         fees= value;
      }
+      void setSid(int value){
+        sid= value;
+     }
 
     //Getters
      int getRollNo(){
@@ -29,5 +32,8 @@ class Student{
 
      float getFees(){
         return (fees);
+     }
+     int getSid(){
+        return (sid);
      }
 };
