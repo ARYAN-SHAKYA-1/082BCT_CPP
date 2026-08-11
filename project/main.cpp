@@ -1,5 +1,6 @@
 #include<iostream>
 #include "./classes/staff.cpp"
+#include "./fileHandeling/input.cpp"
 using namespace std;
 int main(){
     Staff p1;
@@ -25,7 +26,7 @@ int main(){
     else{
         cout<<"Is a non-teacher staff";
     }
-    
+    input();
     
     return 0;
 }

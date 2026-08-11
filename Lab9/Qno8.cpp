@@ -8,8 +8,7 @@ void progterm()
     cout<<"terminating..."<<endl;
     exit(0);
 }
-int main() 
-throw(int,float)
+int main() throw(int,float)
 {
     cout<<"inside main"<<endl;
     try

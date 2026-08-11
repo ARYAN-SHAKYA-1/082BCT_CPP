@@ -30,5 +30,4 @@ class Student{
      float getFees(){
         return (fees);
      }
-
 };
