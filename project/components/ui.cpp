@@ -7,7 +7,8 @@ int indexUi(){
          <<"******* To The College Management system ********"<<endl
          <<"(0) Exit"<<endl
          <<"(1) Input"<<endl
-         <<"(2) Output"<<endl;
+         <<"(2) Output"<<endl
+         <<"(3) Search"<<endl;
     cout<<"************************************************* "<<endl;
     int choice;
     cin>>choice;
