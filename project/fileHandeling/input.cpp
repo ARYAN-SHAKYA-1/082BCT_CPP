@@ -197,7 +197,7 @@ void nonTeacherStaffInput(){
 
 int getNextStudentId(){
     ifstream in;
-    in.open("../text/student.tct",ios::in);
+    in.open("./textstudent.tct",ios::in);
     int maxId=0;
     int currentId;
     string rest;

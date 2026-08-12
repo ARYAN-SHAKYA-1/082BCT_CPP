@@ -1,4 +1,6 @@
+#pragma once
 #include "./person.cpp"
+
 using namespace std;
 
 class Staff:public Person{
