@@ -1,3 +1,4 @@
+#pragma once
 #include "./person.cpp"
 
 class Student: public Person{

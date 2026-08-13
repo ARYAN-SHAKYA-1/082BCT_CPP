@@ -21,8 +21,12 @@ void mainChoice()
    case 2:
     output();
     break;
-
-   
+   case 3:
+    search();
+    break;
+   case 4:
+   filter();
+   break;
    default:
     cout<<"invalid option. press any ky eto continue";
     cin.ignore();

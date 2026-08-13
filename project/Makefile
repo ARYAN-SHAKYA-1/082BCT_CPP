@@ -6,7 +6,6 @@ LDFLAGS = -lstdc++
 # Automatically find all .cpp files in these folders
 SRCS = main.cpp \
        include.cpp \
-       $(wildcard classes/*.cpp) \
        $(wildcard components/*.cpp) \
        $(wildcard fileHandeling/*.cpp)
 
